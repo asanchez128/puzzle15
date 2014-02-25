@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/capture_photo_button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="@string/capture_photo" />
+
+    <Button
+        android:id="@+id/start_game_button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="@string/start_game" />
+
+</LinearLayout>

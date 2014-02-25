@@ -1,0 +1,25 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/fragment_puzzle_classical_tableLayout"
+  android:layout_width="250dp"
+  android:layout_height="250dp" 
+  android:background="@drawable/remote_background"
+  android:stretchColumns="*" 
+  android:layout_gravity="center"
+  >
+  
+  <include
+      android:layout_weight="1"
+      layout="@layout/button_row"
+       />
+
+  <include 
+      android:layout_weight="1"
+      layout="@layout/button_row"
+      />
+  <include 
+      android:layout_weight="1"
+      layout="@layout/button_row"
+       />
+  
+</TableLayout>
