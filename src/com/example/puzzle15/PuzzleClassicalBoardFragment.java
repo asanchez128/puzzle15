@@ -1,11 +1,10 @@
 package com.example.puzzle15;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +15,7 @@ import android.widget.TableRow;
 public class PuzzleClassicalBoardFragment extends Fragment {
 
 	Board myBoard = new Board(3);
+	public final String  TAG = "TTT";
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent,
 			Bundle savedInstanteState) {
@@ -45,9 +45,12 @@ public class PuzzleClassicalBoardFragment extends Fragment {
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
 						int tileIndex = v.getId();
+						Log.i(TAG, "" + tileIndex);
 						System.out.println(tileIndex);
+						myBoard.print();
 						myBoard.canMove(tileIndex);
 						update(tableLayout);
+						myBoard.print();
 					}
 				});
 				
@@ -65,7 +68,7 @@ public class PuzzleClassicalBoardFragment extends Fragment {
 			TableRow row = (TableRow) tableLayout.getChildAt(tableRow);
 			for (int tableColumn = 0; tableColumn < row.getChildCount(); tableColumn++) {
 				Button button = (Button) row.getChildAt(tableColumn);
-
+				
 				if (!myBoard.isEmptyTile(index)) {
 					button.setText("" + myBoard.getContentBoard(index));
 				} else {
